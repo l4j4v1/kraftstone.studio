@@ -7,43 +7,71 @@
   
   /* Estilos generales */
   body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    
+
+    font-family: "Oswald", sans-serif;
+    background-color: #e6e5e5;
     color: #333;
-    line-height: 1.6;
-    padding: 20px;
+    line-height: 1.0;
+    padding: 0px;
   }
   
   /* Encabezado */
   header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
+
+    color: rgb(0, 0, 0);
+    padding: 30px;
   }
+  .linea {
+    height: 2px;
+    background-color: #161616;
+    width: 100%;
+    margin: 40px 0;
+  }
+
+  nav  {
+    
+    margin-bottom: 20px; /* Reduce este valor para acercarlo mÃ¡s */
+    font-size: 20px;
+  }
+  
   
   header h1 {
-    margin-bottom: 10px;
+    margin-bottom: 40px;
+  display: inline-block;
+   
   }
-  
+  /*espacio entre palabras*/
   nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 40px;
   }
-  
+  /* palabras del menu*/ 
   nav a {
-    color: white;
+    color: #000000f3;
     text-decoration: none;
   }
   
-  /* SecciÃ³n principal */
+  /* SecciÃ³n principal */ /*Titulo*/
   main {
-    margin-top: 20px;
+    h2, p {
+        text-align: center;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 80px;
+      }
+      
+    margin-top: 200px;
+    
   }
+  
+
   
   /* Pie de pÃ¡gina */
   footer {
-    margin-top: 40px;
+    margin-top: 500px;
     text-align: center;
     font-size: 0.9rem;
     color: #777;
