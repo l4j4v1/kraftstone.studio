@@ -1,79 +1,187 @@
-/* Reset bÃ¡sico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+
   
-  /* Estilos generales */
+   
+
   body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    background-image: url('images:/grain.png');
+    background-color: #f2f2f2;
+    position: relative;  
+    margin: 0;
+    transition: background-color 0.5s ease; /*cuanto se demora en cambiar al otro color de fondo*/
     
-
-    font-family: "Oswald", sans-serif;
-    background-color: #e6e5e5;
-    color: #333;
-    line-height: 1.0;
-    padding: 0px;
-  }
-  
-  /* Encabezado */
-  header {
-
-    color: rgb(0, 0, 0);
-    padding: 30px;
-  }
-  .linea {
-    height: 2px;
-    background-color: #161616;
-    width: 100%;
-    margin: 40px 0;
-  }
-
-  nav  {
-    
-    margin-bottom: 20px; /* Reduce este valor para acercarlo mÃ¡s */
-    font-size: 20px;
-  }
-  
-  
-  header h1 {
-    margin-bottom: 40px;
-  display: inline-block;
    
   }
-  /*espacio entre palabras*/
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url(http://www.transparenttextures.com/patterns/bedge-grunge.png);
+    opacity: 1; /* más bajo = más sutil */
+    pointer-events: none;
+    z-index: -1; /*esto manda el efecto grain atras de todo*/ 
+  }
+  /* Encabezado */
+  header {
+  
+    border-bottom: 2px solid #2b2b2b; /*color linea inicio*/
+    padding-bottom: 10px;
+    line-height: 1.6;
+    padding: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
+    
+    
+  }
+  
+  header h1 {
+    margin-bottom: 10px;
+  }
+  
   nav ul {
     list-style: none;
     display: flex;
-    gap: 40px;
-  }
-  /* palabras del menu*/ 
-  nav a {
-    color: #000000f3;
-    text-decoration: none;
-  }
-  
-  /* SecciÃ³n principal */ /*Titulo*/
-  main {
-    h2, p {
-        text-align: center;
-        font-family: "Bebas Neue", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 80px;
-      }
-      
-    margin-top: 200px;
+    gap: 20px;
+    position: absolute;
+    top: 50px;
+    right: 40px;
+    display: flex;
+    font-family: "Oswald", sans-serif;
     
   }
   
-
+  nav a {  /*menu pricipal letras*/
   
-  /* Pie de pÃ¡gina */
+    text-decoration: none;
+    color: #2b2b2b;
+      padding: 5px 10px;
+      transition: color 0.3s;
+    }
+   
+.navbar a:hover {
+  color: #ffffff; 
+}
+
+
+
+  /* Sección principal, titulo */
+  main {
+    h2, p {
+      text-align: center;
+      font-family: "Bebas Neue", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      font-size: 80px;
+      line-height: 1.4;
+      margin: 0; 
+      color: #343434 ;
+      word-spacing: 15px;
+      
+    }
+    
+  margin-top: 250px;
+  
+}
+.highlight {
+  position: relative;
+  display: inline-block;
+  padding: 0 8px;
+  z-index: 1;
+}
+
+.highlight::before {
+  content: "";
+  position: absolute;
+  bottom: 10px; /* distancia entre el texto y el fondo */
+  left: 0;
+  width: 100%;
+  height: 100px; /* altura del fondo */
+  background-color: hwb(240 30% 29%); /* color del fondo o delineado */
+  z-index: -1; /* para que se ponga detrás del texto */
+  border-radius: 1px; /* opcional para esquinas redondeadas */
+  opacity: 0.4;
+}
+
+.contenido h1 {
+  font-size: 150px;
+  color:  #ebebeb;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  margin-top: 900px;
+  border-radius: 12px;
+  letter-spacing: 30px;
+
+}
+
+.caja-contenedor {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 50px;
+  margin-top: 200px;
+
+}
+
+.caja {
+  position: relative;    
+  display: block;
+  width: 400px;
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+    
+  
+}
+
+.caja img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0%); /* oscurece */
+  transition: filter 0.3s ease;
+}
+
+
+.caja:hover img {
+  filter: brightness(100%); 
+}
+.caja:hover {
+ 
+  transform: scale(1.10);
+ 
+}
+.caja .texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  opacity: 1; 
+  z-index: 2;
+}
+.caja:hover .texto {
+  opacity: 0;
+}
+
+
+  /* Pie de página */
   footer {
-    margin-top: 500px;
+    margin-top: 0;
+  padding-bottom: 200px;
     text-align: center;
     font-size: 0.9rem;
     color: #777;
   }
+  
   
