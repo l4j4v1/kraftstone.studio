@@ -69,7 +69,7 @@ body {
         display: flex;
         justify-content: space-between; /* separa imagen y texto */
         align-items: center;            /* alinea verticalmente */
-        padding: 50px 100px;  
+        padding: 120px 100px;  
              /* espacio interior (arriba/abajo - lados) */
       }
       
@@ -87,27 +87,34 @@ body {
         object-fit: cover;
       }
       
-      .titulo-derecha {
-        
-        padding-bottom: 500px;
-        padding-right: 750px;
-        font-size: 55px;
-        text-align: right;
-        font-family: "Bebas Neue", sans-serif;
-        margin-bottom: 10px; 
-      }
       
 
-      p {
-
-        
-        font-size: 30px;
-        text-align: right;
-        font-family: "Oswald", sans-serif;
-        display: flex;
-        justify-content: space-between; /* separa imagen y texto */
-        align-items: center;            /* alinea verticalmente */
-        padding: 10px 700px;  
-        margin-top: 0px; 
-
+    
+      .about-me-container {  /*titulo y texto*/
+        width: 60%; /* puedes ajustar el ancho */
+        text-align: left;
+        font-family:  "Bebas Neue", sans-serif;
+        color: #000;
+        position: relative;
+        top: -120px; /* lo sube 50px hacia arriba */
+      }
+      
+      .about-me-container h1 { /*titulo*/
+        font-size: 55px;
+        margin-bottom: 50px;
+      }
+      
+      .about-me-container p { /*texto*/
+        font-size:  30px;
+        line-height: 1.6;
+      }
+      
+      .about-text {
+        max-width: 620px; /* controlas el ancho del párrafo */
+        margin: 0 auto; /* centra el texto dentro del contenedor */
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: -70px; /* mover el texto hacia abajo*/
+        margin-left: 2px; /*mover texto hacia la izquiera*/ 
+        text-align: justify;
       }
